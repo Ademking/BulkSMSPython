@@ -122,22 +122,22 @@ def main():
             if android_version() == 'Android Oreo' :
                 counter += 1
                 print('('+str(counter)+') Sending SMS to ' + number)
-                a = cmd_res('adb shell service call isms 7 i32 0 s16 \"com.android.mms.service\" s16 \"'+number+'\" s16 \"null\" s16 \"'+SMS+'\" s16 \"null\" s16 \"null\"');
+                a = cmd_res('adb shell service call isms 7 i32 0 s16 \"com.android.mms.service\" s16 \"'+number+'\" s16 \"null\" s16 \"'+SMS+'\" s16 \"null\" s16 \"null\"')
                 time.sleep(2)
             elif android_version == 'Android Nougat':
                 counter += 1
                 print('('+str(counter)+') Sending SMS to ' + number)
-                a = cmd_res('adb shell service call isms 7 i32 1 s16 \"com.android.mms\" s16 \"'+number+'\" s16 \"null\" s16 \"'+SMS+'\" s16 \"null\" s16 \"null\"');
+                a = cmd_res('adb shell service call isms 7 i32 1 s16 \"com.android.mms\" s16 \"'+number+'\" s16 \"null\" s16 \"'+SMS+'\" s16 \"null\" s16 \"null\"')
                 time.sleep(2)
             elif android_version == 'Android Marshmallow':
                 counter += 1
                 print('('+str(counter)+') Sending SMS to ' + number)
-                a = cmd_res('adb shell service call isms 7 i32 1 s16 \"com.android.mms\" s16 \"'+number+'\" s16 \"null\" s16 \"'+SMS+'\" s16 \"null\" s16 \"null\"');
+                a = cmd_res('adb shell service call isms 7 i32 1 s16 \"com.android.mms\" s16 \"'+number+'\" s16 \"null\" s16 \"'+SMS+'\" s16 \"null\" s16 \"null\"')
                 time.sleep(2)
             elif android_version == 'Android Lollipop':
                 counter += 1
                 print('('+str(counter)+') Sending SMS to ' + number)
-                a = cmd_res('adb shell service call isms 9 s16 \"com.android.mms\" s16 \"'+number+'\" s16 \"null\" s16 \"'+SMS+'\" s16 \"null\" s16 \"null\"');
+                a = cmd_res('adb shell service call isms 9 s16 \"com.android.mms\" s16 \"'+number+'\" s16 \"null\" s16 \"'+SMS+'\" s16 \"null\" s16 \"null\"')
                 time.sleep(2)
                 
         print('Sending Done Successfully!')
